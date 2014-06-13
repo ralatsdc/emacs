@@ -25,16 +25,16 @@
 (yas-global-mode 1)
 
 ;; Auto-complete setup
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
 (setq
  ac-auto-start 2
  ac-override-local-map nil
  ac-use-menu-map t
  ac-candidate-limit 20)
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;; (ac-config-default)
-(ac-set-trigger-key "TAB")
-(ac-set-trigger-key "<tab>")
 
 ;; Autopair setup
 ;; None required
@@ -54,18 +54,20 @@
 ;; python-mode setup
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq py-electric-colon-active t)
-;; (add-hook 'python-mode-hook 'yas-minor-mode)
+(add-hook 'python-mode-hook 'yas-minor-mode)
 (add-hook 'python-mode-hook 'auto-complete-mode)
 (add-hook 'python-mode-hook 'autopair-mode)
+(add-hook 'python-mode-hook (lambda () (flycheck-mode t)))
 
 ;; Jedi setup
 (add-hook 'python-mode-hook
 	  (lambda ()
-	    (jedi:setup)
-	    (jedi:ac-setup)
-            (local-set-key "\C-cd" 'jedi:show-doc)
-            (local-set-key (kbd "M-SPC") 'jedi:complete)
-            (local-set-key (kbd "M-.") 'jedi:goto-definition)))
+	    (jedi:setup)))
+;;	    (jedi:ac-setup)
+;;            (local-set-key "\C-cd" 'jedi:show-doc)
+;;            (local-set-key (kbd "M-SPC") 'jedi:complete)
+;;            (local-set-key (kbd "M-.") 'jedi:goto-definition)))
+(setq jedi:complete-on-dot t)
 
 ;; pdb setup
 ;; Note the Python version
@@ -92,7 +94,7 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-;; (setq js2-highlight-level 3)
+(setq js2-highlight-level 3)
 (add-hook 'js-mode-hook (lambda () (flycheck-mode t)))
 
 ;; Tern setup
@@ -101,9 +103,9 @@
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js-mode-hook 'auto-complete-mode)
 (eval-after-load 'tern
-   '(progn
-      (require 'tern-auto-complete)
-      (tern-ac-setup)))
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
 (defun delete-tern-process ()
   (interactive)
   (delete-process "Tern"))
