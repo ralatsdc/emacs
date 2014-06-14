@@ -22,9 +22,10 @@
 (require 'magit)
 
 ;; Yasnippet setup
-(yas-global-mode 1)
+;; None required
 
 ;; Auto-complete setup
+;; TODO: Sort this setup
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
@@ -57,16 +58,9 @@
 (add-hook 'python-mode-hook 'yas-minor-mode)
 (add-hook 'python-mode-hook 'auto-complete-mode)
 (add-hook 'python-mode-hook 'autopair-mode)
-(add-hook 'python-mode-hook (lambda () (flycheck-mode t)))
 
 ;; Jedi setup
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (jedi:setup)))
-;;	    (jedi:ac-setup)
-;;            (local-set-key "\C-cd" 'jedi:show-doc)
-;;            (local-set-key (kbd "M-SPC") 'jedi:complete)
-;;            (local-set-key (kbd "M-.") 'jedi:goto-definition)))
+(add-hook 'python-mode-hook (lambda () (jedi:setup)))
 (setq jedi:complete-on-dot t)
 
 ;; pdb setup
@@ -93,13 +87,11 @@
 ;; js-mode setup
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js-mode-hook 'yas-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-(setq js2-highlight-level 3)
-(add-hook 'js-mode-hook (lambda () (flycheck-mode t)))
+;; (setq js2-highlight-level 3)
 
 ;; Tern setup
-(setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
-(setq exec-path (append '("/opt/local/bin") exec-path))
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js-mode-hook 'auto-complete-mode)
 (eval-after-load 'tern
@@ -121,8 +113,7 @@
 (require 'xscheme)
 
 ;; xcheme setup
-(setq scheme-program-name
-      "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
+(setq scheme-program-name "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
 
 ;;;; MATLAB
 
@@ -135,6 +126,8 @@
 
 ;;;; Emacs
 
+;; Custom variables
+;; TODO: Sort these variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -155,6 +148,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Path setup
+(setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
+(setq exec-path (append '("/opt/local/bin") exec-path))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setq exec-path (append '("/usr/local/bin") exec-path))
 
 ;; dired setup
 (setq default-directory "/Users/raymondleclair/Projects")
