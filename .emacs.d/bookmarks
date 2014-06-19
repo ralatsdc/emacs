@@ -1,0 +1,25 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+((".emacs"
+ (filename . "~/Projects/emacs/.emacs")
+ (front-context-string . "\n;;;; Package ma")
+ (rear-context-string)
+ (position . 1))
+("emacs"
+ (filename . "~/Projects/emacs/")
+ (front-context-string . ".emacs\n  -rw-r--")
+ (rear-context-string . "61 Jun 13 20:46 ")
+ (position . 268))
+("authors"
+ (filename . "~/Projects/Blue-Peninsula/bp-content/source/authors/")
+ (front-context-string . "..\n  -rw-r--r-- ")
+ (rear-context-string . "14 Jun  9 16:27 ")
+ (position . 327))
+("js"
+ (filename . "~/Projects/Blue-Peninsula/bp-collections/source/crisis.countries/js/")
+ (front-context-string . "..\n  -rw-r--r-- ")
+ (rear-context-string . "72 Jun 11 08:50 ")
+ (position . 258))
+)
