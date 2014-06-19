@@ -43,6 +43,7 @@
 ;; Requirements:
 ;; $ sudo npm install -g js-beautify
 ;; $ sudo npm install -g tern
+;; $ sudo npm install -g jshint
 
 ;; Packges for development
 (setq to-install
