@@ -1,8 +1,38 @@
-
-;;;; Package management
-
 ;; Requirements:
 ;; + Emacs >= 24
+
+;; $ sudo pip install jedi
+;; $ sudo pip install epc
+
+;; $ sudo npm install -g js-beautify
+;; $ sudo npm install -g tern
+;; $ sudo npm install -g jshint
+
+;; $ cd ~/Packages
+;; $ git clone https://github.com/emacs-ess/ESS.git
+;; $ cd ESS
+;; $ make
+;; # make install (for Applications/Emacs.app)
+;; # make install (for /opt/local/emacs)
+;; See: http://ess.r-project.org/Manual/ess.html
+
+;; + MIT/GNU Scheme
+;; See: http://www.gnu.org/software/mit-scheme/
+
+;; $ cd ~/.emacs.d
+;; $ cvs -d:pserver:anonymous@matlab-emacs.cvs.sourceforge.net:/cvsroot/matlab-emacs login
+;; $ cvs -z3 -d:pserver:anonymous@matlab-emacs.cvs.sourceforge.net:/cvsroot/matlab-emacs co -P matlab-emacs
+;; $ cd matlab-emacs
+;; $ make
+;; See: http://matlab-emacs.sourceforge.net/
+
+;; $ tar -zxvf aspell6-en-7.1-0.tar.gz
+;; $ cd aspell6-en-7.1-0
+;; $ ./configure 
+;; $ make
+;; # sudo make install
+
+;;;; Package management
 
 ;; Packages
 (require 'package)
