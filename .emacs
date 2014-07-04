@@ -73,7 +73,8 @@
    (list (gud-query-cmdline pdb-path
 			    (file-name-nondirectory buffer-file-name)))))
 ;; Ensure local Python libraries can be found
-(setenv "PYTHONPATH" "/Users/raymondleclair/Projects/Blue-Peninsula/bp-content/local/lib/python")
+;; (setenv "PYTHONPATH" (concat "~/Projects/Blue-Peninsula/bp-content/local/lib/python2.7:" (getenv "PYTHONPATH")))
+(setenv "PYTHONPATH" "~/Projects/Blue-Peninsula/bp-content/local/lib/python2.7")
 
 ;;;; JavaScript
 
