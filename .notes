@@ -1,14 +1,22 @@
 2014-07-04
 ==========
 
-The following path is added in .bash_profile, .emacs, and .pylintrc:
+The following path is added in .bash_profile (don't use quotes in
+.bash_profile), .emacs, and .pylintrc:
 
-+ "~/Projects/Blue-Peninsula/bp-content/local/lib/python2.7"
+~/Projects/Blue-Peninsula/bp-content/local/lib/python2.7
 
 Locally installed packages create entries in the easy_install.pth
 file, which can be copied to the corresponding file in
 
-+ /Library/Python/2.7/site-packages
-+ /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
+/Library/Python/2.7/site-packages
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
 
 so that pylint reports that the imports are valid.
+
+2014-07-05
+==========
+
+Note that the system Python install is in:
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
