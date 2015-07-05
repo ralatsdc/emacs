@@ -1,4 +1,5 @@
-;; Requirements:
+;;;; Requirements:
+
 ;; + Emacs >= 24
 
 ;; $ sudo pip install jedi
@@ -12,6 +13,7 @@
 ;; $ git clone https://github.com/emacs-ess/ESS.git
 ;; $ cd ESS
 ;; $ make
+;; Run sudo make install twice. See: Makeconf
 ;; # make install (for Applications/Emacs.app)
 ;; # make install (for /opt/local/emacs)
 ;; See: http://ess.r-project.org/Manual/ess.html
@@ -33,6 +35,8 @@
 ;; # sudo make install
 
 ;;;; Package management
+
+;; M-x eval-buffer
 
 ;; Packages
 (require 'package)
@@ -75,7 +79,7 @@
 ;; $ sudo npm install -g tern
 ;; $ sudo npm install -g jshint
 
-;; Packges for development
+;; Packages for development
 (setq to-install
       '(js2-mode ac-js2 web-beautify tern tern-auto-complete))
 (mapc 'install-if-needed to-install)

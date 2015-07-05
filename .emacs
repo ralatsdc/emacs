@@ -45,6 +45,7 @@
 
 ;; Magit setup
 (global-set-key "\C-xg" 'magit-status)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;;;; Python
 
@@ -142,7 +143,8 @@
  '(inferior-ess-client-command "Initial")
  '(inferior-ess-client-name "Initial")
  '(inferior-ess-ddeclient "Initial")
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(matlab-indent-level 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -155,6 +157,10 @@
 (setq exec-path (append '("/opt/local/bin") exec-path))
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/local/bin") exec-path))
+
+;; Frame setup
+(setq initial-frame-alist
+      '((top . 1) (left . 177) (width . 125) (height . 52)))
 
 ;; dired setup
 (setq default-directory "/Users/raymondleclair/Projects")

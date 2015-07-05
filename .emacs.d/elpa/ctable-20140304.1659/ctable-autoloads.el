@@ -1,18 +1,17 @@
 ;;; ctable-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("ctable-pkg.el" "ctable.el") (21403 38644
-;;;;;;  390250 0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/ctable-20140304.1659/ctable-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/ctable-20140304.1659/ctable.el")
+;;;;;;  (21873 64654 467729 0))
 
 ;;;***
 
-(provide 'ctable-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; ctable-autoloads.el ends here

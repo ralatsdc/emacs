@@ -1,12 +1,11 @@
 ;;; web-beautify-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (web-beautify-js-buffer web-beautify-js web-beautify-css-buffer
-;;;;;;  web-beautify-css web-beautify-html-buffer web-beautify-html)
-;;;;;;  "web-beautify" "web-beautify.el" (21403 38693 0 0))
-;;; Generated autoloads from web-beautify.el
+;;;### (autoloads nil "web-beautify" "../../../../../.emacs.d/elpa/web-beautify-20131118.226/web-beautify.el"
+;;;;;;  "0290fba968d96e7261a421ac7f31df6b")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/web-beautify-20131118.226/web-beautify.el
 
 (autoload 'web-beautify-html "web-beautify" "\
 Format region if active, otherwise the current buffer.
@@ -46,16 +45,15 @@ Format the current buffer according to the js-beautify command.
 
 ;;;***
 
-;;;### (autoloads nil nil ("web-beautify-pkg.el") (21403 38693 464552
-;;;;;;  0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/web-beautify-20131118.226/web-beautify-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/web-beautify-20131118.226/web-beautify.el")
+;;;;;;  (21873 64701 46027 0))
 
 ;;;***
 
-(provide 'web-beautify-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; web-beautify-autoloads.el ends here
