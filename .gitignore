@@ -3,3 +3,5 @@
 .emacs.d/elpa/archives/gnu/
 .emacs.d/elpa/archives/marmalade/
 .emacs.d/elpa/archives/melpa/
+.emacs.d/elpa.curr
+.emacs.d/elpa.orig
