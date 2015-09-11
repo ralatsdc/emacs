@@ -50,6 +50,8 @@
 ;;;; Python
 
 ;; Packges for development
+(setq py-install-directory "~/.emacs.d/elpa/python-mode-20150520.353")
+(add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 (require 'jedi)
 
