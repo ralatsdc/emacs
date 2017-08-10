@@ -1,0 +1,7 @@
+(load "/Users/raymondleclair/Projects/Development/emacs/init-emacs.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-development.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-python.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-javascript.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-matlab.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-java.el")
+(load "/Users/raymondleclair/Projects/Development/emacs/init-r.el")
