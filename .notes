@@ -1,3 +1,14 @@
+2017-08-15
+==========
+
+Installed via packages:
+
+Java
+MacTeX
+R
+Vagrant
+
+
 2014-07-04
 ==========
 
@@ -13,6 +24,7 @@ file, which can be copied to the corresponding file in
 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
 
 so that pylint reports that the imports are valid.
+
 
 2014-07-05
 ==========
