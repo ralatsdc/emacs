@@ -1,5 +1,9 @@
 # R
 
+# System packages
+sudo port install r
+
+# ESS installation
 # See: http://ess.r-project.org/Manual/ess.html#Installation
 set -e
 pushd ~/.emacs.d

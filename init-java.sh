@@ -4,6 +4,7 @@
 sudo port install maven3
 sudo port select --set maven maven3
 
+# JDEE server installation
 # See: https://github.com/jdee-emacs/jdee-server
 set -e
 pushd ~/.emacs.d

@@ -1,12 +1,14 @@
 # MATLAB
 
-# See: http://matlab-emacs.sourceforge.net/
+# System packages
+# None required
+
+# Matlab-emacs installation
+# See: https://sourceforge.net/p/matlab-emacs/src/ci/master/tree/
 set -e
 pushd ~/.emacs.d
-cvs -d:pserver:anonymous@matlab-emacs.cvs.sourceforge.net:/cvsroot/matlab-emacs login
-cvs -z3 -d:pserver:anonymous@matlab-emacs.cvs.sourceforge.net:/cvsroot/matlab-emacs co -P matlab-emacs
-pushd matlab-emacs
-touch Makefile
+git clone https://git.code.sf.net/p/matlab-emacs/src matlab-emacs-src
+pushd matlab-emacs-src
 make
 popd
 popd

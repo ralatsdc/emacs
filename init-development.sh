@@ -1,4 +1,4 @@
-# Emacs
+# Development
 
 # System packages
-sudo port install cvs
+# None required
