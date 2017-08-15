@@ -3,6 +3,7 @@
 ;; Custom variables
 (custom-set-variables
  '(dired-use-ls-dired nil)
+ '(electric-pair-mode 1)
  '(ess-default-style (quote DEFAULT))
  '(ess-keep-dump-files "always")
  '(ess-use-auto-complete t)
