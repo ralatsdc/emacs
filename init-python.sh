@@ -13,5 +13,7 @@ sudo port select --set virtualenv virtualenv27
 sudo port install py27-virtualenvwrapper
 
 # Python packages
-sudo -H pip install jedi
 sudo -H pip install epc
+sudo -H pip install flake8
+sudo -H pip install pylint
+sudo -H pip install jedi
