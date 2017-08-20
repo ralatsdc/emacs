@@ -1,5 +1,6 @@
 SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Setup Python, JavaScript, MATLAB, Java, and R development
 $SCRIPT_HOME/init-emacs.sh
 $SCRIPT_HOME/init-development.sh
 $SCRIPT_HOME/init-python.sh

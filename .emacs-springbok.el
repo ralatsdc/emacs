@@ -1,6 +1,8 @@
-(package-initialize)
-
 (setq emacs-home (file-name-as-directory (getenv "EMACS_HOME")))
+
+;; Load packages for Python, JavaScript, MATLAB, Java, and R
+;; development
+(package-initialize)
 
 (load (concat emacs-home ".emacs-init.el"))
 
