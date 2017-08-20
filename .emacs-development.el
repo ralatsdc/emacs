@@ -3,6 +3,7 @@
 ;; Packages required
 (require 'auto-complete)
 (require 'flycheck)
+(require 'helm-config)
 (require 'magit)
 (require 'yasnippet)
 
@@ -13,6 +14,11 @@
 ;; Flycheck setup
 ;; See: http://www.flycheck.org/en/latest/user/quickstart.html
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; Helm setup
+;; See: https://emacs-helm.github.io/helm/
+(global-set-key (kbd "M-x") 'helm-M-x)
+(helm-mode 1)
 
 ;; Magit setup
 ;; See: https://magit.vc/manual/magit/Essential-Settings.html#Essential-Settings

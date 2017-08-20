@@ -2,5 +2,5 @@
 
 ;; Packages
 (setq to-install
-      '(auto-complete flycheck magit yasnippet))
+      '(auto-complete flycheck helm helm-ag magit yasnippet))
 (mapc 'install-if-needed to-install)

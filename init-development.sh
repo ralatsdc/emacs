@@ -1,4 +1,4 @@
 # Development
 
 # System packages
-# None required
+sudo port install the_silver_searcher
