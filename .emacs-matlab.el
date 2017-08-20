@@ -1,7 +1,7 @@
 ;;;; MATLAB
 
 ;; Packages
-(add-to-list 'load-path "/Users/raymondleclair/.emacs.d/matlab-emacs-src")
+(add-to-list 'load-path "~/.emacs.d/matlab-emacs-src")
 (require 'matlab-load)
 
 ;; Matlab-emacs setup
