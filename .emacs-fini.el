@@ -23,13 +23,13 @@
 
 ;; Frame setup
 (setq initial-frame-alist
-      '((top . 1) (left . 177) (width . 125) (height . 52)))
+      '((top . 1) (left . 177) (width . 130) (height . 65)))
 
 ;; Dired setup
 (setq default-directory "/Users/raymondleclair/Projects")
 
 ;; Ido setup
-(ido-mode t)
+;; (ido-mode t)
 
 ;; Ispell setup
 ;; (setq ispell-program-name "/opt/local/bin/aspell")
