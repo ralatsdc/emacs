@@ -32,7 +32,7 @@
 ;; (ido-mode t)
 
 ;; Ispell setup
-;; (setq ispell-program-name "/opt/local/bin/aspell")
+(setq ispell-program-name "/opt/local/bin/aspell")
 
 ;; Abbrev-mode setup
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")

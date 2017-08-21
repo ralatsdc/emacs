@@ -1,4 +1,4 @@
-# emacs
+# Emacs
 
 An editor-in-chief (EIC) is a publication's editorial leader, having final responsibility for all operations and policies.
 
@@ -24,7 +24,7 @@ $ export EMACS_HOME=~/Projects/Development/emacs
 ```
 $ $EMACS_HOME/init-springbok.sh
 ```
-3. Launch emacs and evaluate the Emacs Lisp init script `init-springbok.el`, or equivalent
+3. Launch Emacs and evaluate the Emacs Lisp init script `init-springbok.el`, or equivalent
 ```
 $ open -n -a Emacs $EMACS_HOME/init-springbok.el
 M-x eval-buffer
