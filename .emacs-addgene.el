@@ -1,4 +1,4 @@
-(setq emacs-home (file-name-as-directory (getenv "EMACS_HOME")))
+(setq emacs-home (file-name-as-directory "{{EMACS_HOME}}"))
 
 ;; Load packages for Python and JavaScript development
 (package-initialize)

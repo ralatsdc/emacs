@@ -8,3 +8,10 @@ $SCRIPT_HOME/init-javascript.sh
 $SCRIPT_HOME/init-matlab.sh
 $SCRIPT_HOME/init-java.sh
 $SCRIPT_HOME/init-r.sh
+
+# Setup Emacs
+sed s%{{EMACS_HOME}}%$SCRIPT_HOME% init-springbok.el > init.el
+sed s%{{EMACS_HOME}}%$SCRIPT_HOME% .emacs-springbok.el > .emacs
+pushd ~
+ln -sf $SCRIPT_HOME/.emacs .emacs
+popd
