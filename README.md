@@ -24,13 +24,8 @@ $ export EMACS_HOME=~/Projects/Development/emacs
 ```
 $ $EMACS_HOME/init-springbok.sh
 ```
-3. Launch Emacs and evaluate the Emacs Lisp init script `init-springbok.el`, or equivalent
+3. Launch Emacs and evaluate the Emacs Lisp init script `init.el`
 ```
-$ open -n -a Emacs $EMACS_HOME/init-springbok.el
+$ open -n -a Emacs $EMACS_HOME/init.el
 M-x eval-buffer
-```
-4. Create symbolic links to Bash profile and Emacs init file
-```
-$ ln -s $EMACS_HOME/.bash_profile
-$ ln -s $EMACS_HOME/.emacs
 ```

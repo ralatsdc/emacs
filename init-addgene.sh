@@ -13,6 +13,11 @@ pushd ~
 ln -sf $SCRIPT_HOME/.emacs .emacs
 popd
 
+# Setup Bash
+pushd ~
+ln -sf $SCRIPT_HOME/.bash_profile .bash_profile
+popd
+
 # Setup node's http-server
 pushd ~/Public
 ln -s ~/Projects/Addgene/sequence-viewer/src/analyzer analyzer
