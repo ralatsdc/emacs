@@ -1,7 +1,17 @@
 # R
 
 # System packages
-sudo port install r
+if [[ "$OSTYPE" == 'darwin16' ]]; then
+    sudo port install r
+
+elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
+    sudo apt-get install r-base
+    
+else
+    echo "Unexpected OS"
+    exit 1
+
+fi
 
 # ESS installation
 # See: http://ess.r-project.org/Manual/ess.html#Installation

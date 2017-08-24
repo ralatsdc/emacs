@@ -1,8 +1,19 @@
 # JavaScript
 
 # System packages
-sudo port install nodejs8
-sudo port install npm5
+if [[ "$OSTYPE" == 'darwin16' ]]; then
+    sudo port install nodejs8
+    sudo port install npm5
+
+elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
+    sudo apt-get install nodejs
+    sudo apt-get install npm
+
+else
+    echo "Unexpected OS"
+    exit 1
+
+fi
 
 # Node packages
 sudo npm install -g http-server

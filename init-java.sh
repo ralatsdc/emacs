@@ -1,8 +1,18 @@
 # Java
 
 # System packages
-sudo port install maven3
-sudo port select --set maven maven3
+if [[ "$OSTYPE" == 'darwin16' ]]; then
+    sudo port install maven3
+    sudo port select --set maven maven3
+
+elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
+    sudo apt-get install maven3
+
+else
+    echo "Unexpected OS"
+    exit 1
+
+fi
 
 # JDEE server installation
 # See: https://github.com/jdee-emacs/jdee-server
