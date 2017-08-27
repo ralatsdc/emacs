@@ -18,5 +18,5 @@ popd
 
 # Setup Bash
 pushd ~
-ln -sf $SCRIPT_HOME/.bash_profile .bash_profile
+ln -sf $SCRIPT_HOME/.bash_springbok .bash_springbok
 popd

@@ -6,7 +6,11 @@ if [[ "$OSTYPE" == 'darwin16' ]]; then
     sudo port install emacs-devel
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
-    sudo apt-get install emacs24
+    sudo apt-get install software-properties-common 
+    sudo add-apt-repository ppa:ubuntu-elisp/ppa
+    sudo apt-get update
+    sudo apt-get install emacs-snapshot
+    sudo update-alternatives --config emacs
 
 else
     echo "Unexpected OS"
