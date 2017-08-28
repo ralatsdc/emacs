@@ -16,16 +16,17 @@ All other dependencies are installed from MacPorts, or, in the case of MATLAB, R
 
 ## Quickstart
 
-1. Set the environment variable `EMACS_HOME`
+1. Clone the emacs setup repository. The resulting directoryt is referred to as EMACS_HOME below.
 ```
-$ export EMACS_HOME=~/Projects/Development/emacs
+$ git clone git@github.com:ralatsdc/emacs.git
 ```
-2. Run the Bash init script `init-springbok.sh`, or equivalent
+2. Run the Bash init script `init-springbok.sh`, or equivalent.
 ```
 $ $EMACS_HOME/init-springbok.sh
 ```
-3. Launch Emacs and evaluate the Emacs Lisp init script `init.el`
+3. Launch Emacs and evaluate the Emacs Lisp init script `init.el`.
 ```
-$ open -n -a Emacs $EMACS_HOME/init.el
+$ open -n -a Emacs $EMACS_HOME/init.el, or equivalent
 M-x eval-buffer
 ```
+4. TODO: Source the bash profile
