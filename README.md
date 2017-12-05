@@ -7,6 +7,7 @@ An editor-in-chief (EIC) is a publication's editorial leader, having final respo
 ## Prerequisites
 
 The default (Springbok) installation assumes the following packages have been installed manually:
++ [MacPorts](https://www.macports.org/install.php)
 + [Java](https://www.java.com/en/)
 + [MacTeX](https://tug.org/mactex/mactex-download.html)
 + [R](https://cran.r-project.org/bin/macosx/)
