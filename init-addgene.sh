@@ -1,3 +1,4 @@
+# Addgene
 SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Setup Python and JavaScript development

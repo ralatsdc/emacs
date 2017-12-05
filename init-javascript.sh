@@ -20,3 +20,10 @@ sudo npm install -g http-server
 sudo npm install -g tern
 sudo npm install -g jshint
 sudo npm install -g js-beautify
+
+# Setup JSHint and ESLint
+SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd ~
+ln -sf $SCRIPT_HOME/.jshintrc-default .jshintrc
+ln -sf $SCRIPT_HOME/.eslintrc-google .eslintrc
+popd
