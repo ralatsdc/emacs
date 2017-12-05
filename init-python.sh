@@ -2,8 +2,11 @@
 
 # System packages
 if [[ "$OSTYPE" == 'darwin16' ]]; then
-    sudo port install python27
+    sudo port install python27 +readline
     sudo port select --set python python27
+
+    sudo port install py27-ipython
+    sudo port select --set ipython py27-ipython
 
     sudo port install py27-pip
     sudo port select --set pip pip27
