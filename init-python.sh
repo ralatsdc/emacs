@@ -21,6 +21,8 @@ if [[ "$OSTYPE" == 'darwin16' ]]; then
     sudo port install py27-pylint
     sudo port select --set pylint pylint27
     
+    sudo port install py27-pkg-config
+
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python2.7
     sudo apt-get install python-pip
@@ -28,6 +30,7 @@ elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install virtualenvwrapper
     sudo apt-get install python-flake8
     sudo apt-get install pylint
+    sudo apt-get install pkg-config
 
 else
     echo "Unexpected OS"
