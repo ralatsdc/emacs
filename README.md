@@ -17,7 +17,7 @@ All other dependencies are installed from MacPorts, or, in the case of MATLAB, R
 
 ## Quickstart
 
-1. Clone the emacs setup repository. The resulting directoryt is referred to as EMACS_HOME below.
+1. Clone the emacs setup repository. The resulting directory is referred to as EMACS_HOME below.
 ```
 $ git clone git@github.com:ralatsdc/emacs.git
 ```

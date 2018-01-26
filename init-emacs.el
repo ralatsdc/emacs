@@ -17,3 +17,8 @@
 (defun install-if-needed (package)
   (unless (package-installed-p package)
     (package-install package)))
+
+;; Packages
+(setq to-install
+      '(exec-path-from-shell))
+(mapc 'install-if-needed to-install)

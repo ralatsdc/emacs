@@ -21,7 +21,7 @@ if [ ! -e ~/.emacs.d/jdee-server ]; then
     pushd ~/.emacs.d
     git clone https://github.com/jdee-emacs/jdee-server.git
     pushd jdee-server
-    mvn -Dmaven.test.skip=true assembly:assembly
+    mvn -Dmaven.test.skip=true package
     JAR=`ls target/*-bundle-*.jar`
     mkdir jars
     cp $JAR jars/jdee-bundle.jar

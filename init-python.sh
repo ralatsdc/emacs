@@ -14,6 +14,8 @@ if [[ "$OSTYPE" == 'darwin16' ]]; then
     sudo port install py27-virtualenv
     sudo port select --set virtualenv virtualenv27
 
+    sudo port install py27-virtualenvwrapper
+    
     sudo port install py27-flake8
     port select --set flake8 flake8-27
     port select --set pyflakes py27-pyflakes
@@ -25,6 +27,7 @@ if [[ "$OSTYPE" == 'darwin16' ]]; then
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python2.7
+    # ipython?
     sudo apt-get install python-pip
     sudo apt-get install python-virtualenv
     sudo apt-get install virtualenvwrapper
