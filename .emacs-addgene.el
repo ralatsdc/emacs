@@ -26,11 +26,13 @@
  '(inferior-ess-client-name "Initial")
  '(inferior-ess-ddeclient "Initial")
  '(inhibit-startup-screen t)
- '(jdee-server-dir "~/.emacs.d/jdee-server/jars")
+ ;; '(jdee-server-dir "~/.emacs.d/jdee-server/jars")
  '(matlab-indent-level 2)
  '(package-selected-packages
    (quote
-    (helm-ag helm yasnippet web-beautify tern python-mode magit js2-mode jedi jdee))))
+    ;; (helm-ag helm yasnippet web-beautify tern python-mode magit js2-mode jedi jdee))))
+    ;; (helm-ag helm yasnippet web-beautify tern python-mode magit js2-mode jedi eclim))))
+    (helm-ag helm yasnippet web-beautify tern python-mode magit js2-mode jedi))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

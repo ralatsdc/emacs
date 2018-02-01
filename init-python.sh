@@ -23,7 +23,7 @@ if [[ "$OSTYPE" == 'darwin16' ]]; then
     sudo port install py27-pylint
     sudo port select --set pylint pylint27
     
-    sudo port install py27-pkg-config
+    sudo port install py27-pkgconfig
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python2.7

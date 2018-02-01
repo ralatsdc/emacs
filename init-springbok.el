@@ -7,5 +7,5 @@
 (load (concat emacs-home "init-python.el"))
 (load (concat emacs-home "init-javascript.el"))
 (load (concat emacs-home "init-matlab.el"))
-(load (concat emacs-home "init-java.el"))
+;; (load (concat emacs-home "init-java.el"))
 (load (concat emacs-home "init-r.el"))

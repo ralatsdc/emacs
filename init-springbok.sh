@@ -6,7 +6,7 @@ $SCRIPT_HOME/init-development.sh
 $SCRIPT_HOME/init-python.sh
 $SCRIPT_HOME/init-javascript.sh
 $SCRIPT_HOME/init-matlab.sh
-$SCRIPT_HOME/init-java.sh
+# $SCRIPT_HOME/init-java.sh
 $SCRIPT_HOME/init-r.sh
 
 # Setup Emacs

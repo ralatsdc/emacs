@@ -5,5 +5,5 @@
 (require 'matlab-load)
 
 ;; Matlab-emacs setup
-;; (setq matlab-indent-function-body t)
-;; (setq fill-column 125))
+(setq matlab-indent-function-body t)
+(setq fill-column 125)

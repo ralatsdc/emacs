@@ -2,5 +2,5 @@
 
 ;; Packages
 (setq to-install
-      '(memoize dash jdee))
+      '(memoize dash jdee eclim))
 (mapc 'install-if-needed to-install)

@@ -9,9 +9,10 @@ An editor-in-chief (EIC) is a publication's editorial leader, having final respo
 The default (Springbok) installation assumes the following packages have been installed manually:
 + [MacPorts](https://www.macports.org/install.php)
 + [Java](https://www.java.com/en/)
++ [Eclipse](https://www.eclipse.org/)
 + [MacTeX](https://tug.org/mactex/mactex-download.html)
-+ [R](https://cran.r-project.org/bin/macosx/)
 + [Vagrant](https://www.vagrantup.com/downloads.html)
++ [R](https://cran.r-project.org/bin/macosx/)
 
 All other dependencies are installed from MacPorts, or, in the case of MATLAB, R, and Java, from source, in the various Bash init scripts.
 

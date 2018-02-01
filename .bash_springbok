@@ -12,6 +12,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export EMACS_HOME=~/Projects/Development/emacs
 export EDITOR=emacs
 alias open.Emacs="open -n -a Emacs"
+alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
 # Mac OS X aliases
 alias dns.flush.cache="sudo dscacheutil -flushcache"
