@@ -12,6 +12,7 @@
 (load (concat emacs-home ".emacs-matlab.el"))
 ;; (load (concat emacs-home ".emacs-java.el"))
 (load (concat emacs-home ".emacs-r.el"))
+(load (concat emacs-home ".emacs-yaml.el"))
 
 (load (concat emacs-home ".emacs-fini.el"))
 
