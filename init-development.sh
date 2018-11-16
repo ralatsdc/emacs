@@ -1,7 +1,7 @@
 # Development
 
 # System packages
-if [[ "$OSTYPE" == 'darwin16' ]]; then
+if [[ "$OSTYPE" == 'darwin17' ]]; then
     sudo port install aspell
     sudo port install aspell-dict-en
     sudo port install the_silver_searcher

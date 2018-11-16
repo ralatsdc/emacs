@@ -31,6 +31,8 @@ alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
 ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
+alias cd.addgene-bioinformatics="cd ~/Projects/Addgene/addgene-bioinformatics/"
+alias cd.addgene-tex-doc="cd ~/Projects/Addgene/addgene-tex-doc/"
 alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
 alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
 alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"

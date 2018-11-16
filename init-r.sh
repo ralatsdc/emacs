@@ -1,7 +1,7 @@
 # R
 
 # System packages
-if [[ "$OSTYPE" == 'darwin16' ]]; then
+if [[ "$OSTYPE" == 'darwin17' ]]; then
     sudo port install r
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then

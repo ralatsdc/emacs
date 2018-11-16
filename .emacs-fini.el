@@ -12,7 +12,9 @@
  '(inferior-ess-client-name "Initial")
  '(inferior-ess-ddeclient "Initial")
  '(inhibit-startup-screen t)
+ '(default-fill-column 80)
  '(matlab-indent-level 2)
+ '(js-indent-level 4)
  )
 
 ;; Path setup
