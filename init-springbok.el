@@ -10,3 +10,4 @@
 ;; (load (concat emacs-home "init-java.el"))
 (load (concat emacs-home "init-scala.el"))
 (load (concat emacs-home "init-r.el"))
+(load (concat emacs-home "init-yaml.el"))

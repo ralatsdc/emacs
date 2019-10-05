@@ -14,7 +14,7 @@ The default (Springbok) installation assumes the following packages have been in
 + [Vagrant](https://www.vagrantup.com/downloads.html)
 + [R](https://cran.r-project.org/bin/macosx/)
 
-All other dependencies are installed from MacPorts, or, in the case of MATLAB, R, and Java, from source, in the various Bash init scripts.
+All other dependencies are installed from MacPorts, or, in the case of MATLAB, R, Java, and YAML from source, in the various Bash init scripts.
 
 ## Quickstart
 
@@ -31,4 +31,4 @@ $ $EMACS_HOME/init-springbok.sh
 $ open -n -a Emacs $EMACS_HOME/init.el, or equivalent
 M-x eval-buffer
 ```
-4. TODO: Source the bash profile
+4. [Optional] Source the bash profile
