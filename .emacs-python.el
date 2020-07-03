@@ -4,6 +4,10 @@
 (require 'python-mode)
 (require 'jedi)
 
+;; Packages loaded
+(add-to-list 'load-path "~/.emacs.d/blacken")
+(require 'blacken)
+
 ;; Python-mode setup
 ;; See: https://www.emacswiki.org/emacs/ProgrammingWithPythonModeDotEl
 (autoload 'python-mode "python-mode" "Python Mode." t)

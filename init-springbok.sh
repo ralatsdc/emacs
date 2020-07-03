@@ -8,6 +8,7 @@ $SCRIPT_HOME/init-javascript.sh
 $SCRIPT_HOME/init-matlab.sh
 # $SCRIPT_HOME/init-java.sh
 $SCRIPT_HOME/init-r.sh
+$SCRIPT_HOME/init-scala.sh
 $SCRIPT_HOME/init-yaml.sh
 
 # Setup Emacs
