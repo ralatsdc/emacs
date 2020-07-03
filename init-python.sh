@@ -44,6 +44,19 @@ fi
 # Python packages
 sudo -H pip install epc
 sudo -H pip install jedi
+sudo -H pip install black
+
+# black link
+sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.7/bin/black black
+
+# blacken installation
+# See: https://github.com/pythonic-emacs/blacken
+if [ ! -e ~/.emacs.d/blacken ]; then
+    set -e
+    pushd ~/.emacs.d
+    git clone git@github.com:pythonic-emacs/blacken.git
+    popd
+fi
 
 # Setup Pylint
 SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
