@@ -1,7 +1,7 @@
 # JavaScript
 
 # System packages
-if [[ "$OSTYPE" == 'darwin18' ]]; then
+if [[ "$OSTYPE" == 'darwin19' ]]; then
     sudo port install nodejs12
     sudo port install npm6
 
