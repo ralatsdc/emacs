@@ -1,7 +1,7 @@
 # Scala
 
 # System packages
-if [[ "$OSTYPE" == 'darwin17' ]]; then
+if [[ "$OSTYPE" == 'darwin18' ]]; then
     sudo port install sbt
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then

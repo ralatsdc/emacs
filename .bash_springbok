@@ -5,14 +5,21 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Virtualenvwrapper setup
 # See: http://virtualenvwrapper.readthedocs.io/en/latest/install.html
-source /opt/local/bin/virtualenvwrapper.sh-2.7
+# export VIRTUALENVWRAPPER_PYTHON='/opt/local/bin/python3.7'
+# export VIRTUALENVWRAPPER_VIRTUALENV='/opt/local/bin/virtualenv-3.7'
+# export VIRTUALENVWRAPPER_VIRTUALENV_CLONE='/opt/local/bin/virtualenv-clone-3.7'
+source /opt/local/bin/virtualenvwrapper.sh-3.7
 export WORKON_HOME=$HOME/.virtualenvs
 
 # Emacs setup
-export EMACS_HOME=~/Projects/Development/emacs
+export EMACS_HOME=~/Projects/Springbok/emacs
 export EDITOR=emacs
 alias open.Emacs="open -n -a Emacs"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
+
+# Kafka setup
+export KAFKA_HOME=~/Packages/Apache/kafka_2.12-2.5.0
+export PATH=$KAFKA_HOME/bin:$PATH
 
 # Mac OS X aliases
 alias dns.flush.cache="sudo dscacheutil -flushcache"
@@ -31,8 +38,36 @@ alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
 ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
-alias cd.addgene-bioinformatics="cd ~/Projects/Addgene/addgene-bioinformatics/"
-alias cd.addgene-tex-doc="cd ~/Projects/Addgene/addgene-tex-doc/"
 alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
 alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
 alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"
+
+# Springbok development aliases
+alias cd.system-planning-toolbox="cd ~/Workspace/Java/system-planning-toolbox"
+
+# IQT development aliases
+alias cd.MITx-6.86x="cd /Users/raymondleclair/Projects/edX/MITx-6.86x ; conda activate mitx-6.86x"
+alias cd.addgene-bioinformatics="cd ~/Projects/IQT/addgene-bioinformatics ; workon addgene-bioinformatics"
+alias cd.ssake='cd ~/Projects/IQT/SSAKE/'
+
+# alias cd.bioconda-recipes="cd ~/Projects/IQT/bioconda-recipes ; source ~/miniconda3/bin/activate"
+# alias conda.activate="source ~/miniconda3/bin/activate"
+
+# added by Miniconda3 4.7.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/opt/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+alias cd.fundamentals='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'
+alias cd.fundamentals-of-statistics='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'

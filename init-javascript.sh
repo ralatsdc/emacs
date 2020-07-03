@@ -1,9 +1,9 @@
 # JavaScript
 
 # System packages
-if [[ "$OSTYPE" == 'darwin17' ]]; then
-    sudo port install nodejs8
-    sudo port install npm5
+if [[ "$OSTYPE" == 'darwin18' ]]; then
+    sudo port install nodejs12
+    sudo port install npm6
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install nodejs
