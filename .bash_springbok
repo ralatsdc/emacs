@@ -1,14 +1,10 @@
-
 # MacPorts setup
 # See: https://guide.macports.org/chunked/installing.shell.html
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Virtualenvwrapper setup
 # See: http://virtualenvwrapper.readthedocs.io/en/latest/install.html
-# export VIRTUALENVWRAPPER_PYTHON='/opt/local/bin/python3.7'
-# export VIRTUALENVWRAPPER_VIRTUALENV='/opt/local/bin/virtualenv-3.7'
-# export VIRTUALENVWRAPPER_VIRTUALENV_CLONE='/opt/local/bin/virtualenv-clone-3.7'
-source /opt/local/bin/virtualenvwrapper.sh-3.7
+source /opt/local/bin/virtualenvwrapper.sh-3.8
 export WORKON_HOME=$HOME/.virtualenvs
 
 # Emacs setup
@@ -21,14 +17,6 @@ alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 export KAFKA_HOME=~/Packages/Apache/kafka_2.12-2.5.0
 export PATH=$KAFKA_HOME/bin:$PATH
 
-# Mac OS X aliases
-alias dns.flush.cache="sudo dscacheutil -flushcache"
-alias dns.kill.responder="sudo killall -HUP mDNSResponder"
-alias dns.reset="dns.flush.cache ; sleep 3 ; dns.kill.responder"
-alias finder.killall="killall Finder /System/Library/CoreServices/Finder.app"
-alias finder.show.files="defaults write com.apple.finder AppleShowAllFiles YES ; finder.killall"
-alias finder.hide.files="defaults write com.apple.finder AppleShowAllFiles NO ; finder.killall"
-
 # Version control aliases 
 srt="committerdate"
 fmt="'%(committerdate:short) %(authorname) %(HEAD) "
@@ -36,23 +24,27 @@ fmt+="%(color:red)%(refname:short)%(color:reset) "
 fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
-# Addgene development aliases
-ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
-alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
-alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
-alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"
-
 # Springbok development aliases
+alias cd.GoogleNews="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews"
+alias cd.HTTP_Request_Randomizer="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews/HTTP_Request_Randomizer"
+alias cd.emacs="cd ~/Projects/Springbok/emacs"
+alias cd.springbok-retrospective="cd ~/Projects/Springbok/springbok-retrospective"
 alias cd.system-planning-toolbox="cd ~/Workspace/Java/system-planning-toolbox"
 
 # IQT development aliases
-alias cd.MITx-6.86x="cd /Users/raymondleclair/Projects/edX/MITx-6.86x ; conda activate mitx-6.86x"
-alias cd.addgene-bioinformatics="cd ~/Projects/IQT/addgene-bioinformatics ; workon addgene-bioinformatics"
-alias cd.ssake='cd ~/Projects/IQT/SSAKE/'
 
-# alias cd.bioconda-recipes="cd ~/Projects/IQT/bioconda-recipes ; source ~/miniconda3/bin/activate"
-# alias conda.activate="source ~/miniconda3/bin/activate"
-# alias cd.fundamentals='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'
-# alias cd.fundamentals-of-statistics='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'
-
-# added by Miniconda3 4.7.12 installer
+# Added by Miniconda3 4.9.2 installer
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/raymondleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/raymondleclair/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
