@@ -1,0 +1,4 @@
+;;;; Scala
+
+;; Packages required
+;; None
