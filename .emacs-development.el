@@ -1,13 +1,12 @@
 ;;;; Development
 
 ;; Packages required
-(require 'use-package)
 (require 'async)
 (require 'auto-complete)
 (require 'flycheck)
-(require 'helm-config)
+;;-(require 'helm-config)
 (require 'magit)
-(require 'yasnippet)
+;;-(require 'yasnippet)
 
 ;; Auto-complete setup
 ;; See: https://github.com/auto-complete/auto-complete/blob/master/doc/manual.md
@@ -19,11 +18,9 @@
 
 ;; Helm setup
 ;; See: https://emacs-helm.github.io/helm/
-(global-set-key (kbd "M-x") 'helm-M-x)
-(helm-mode 1)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;;-(global-set-key (kbd "M-x") #'helm-M-x)
+;;-(global-set-key (kbd "C-x C-f") #'helm-find-files)
+;;-(helm-mode 1)
 
 ;; Magit setup
 ;; See: https://magit.vc/manual/magit/Essential-Settings.html#Essential-Settings
@@ -31,4 +28,4 @@
 
 ;; Yasnippet setup
 ;; See: https://github.com/joaotavora/yasnippet
-(yas-global-mode 1)
+;;-(yas-global-mode 1)
