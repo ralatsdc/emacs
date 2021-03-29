@@ -17,8 +17,8 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
     sudo port install py38-virtualenvwrapper
     
     sudo port install py38-flake8
-    port select --set flake8 flake8-38
-    port select --set pyflakes py38-pyflakes
+    sudo port select --set flake8 flake8-38
+    sudo port select --set pyflakes py38-pyflakes
 
     sudo port install py38-pylint
     sudo port select --set pylint pylint38
@@ -47,7 +47,7 @@ sudo -H pip install jedi
 sudo -H pip install black
 
 # black link
-sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
+sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken
