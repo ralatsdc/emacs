@@ -1,22 +1,5 @@
 ;;;; Emacs
 
-;; Custom variables
-(custom-set-variables
- '(dired-use-ls-dired nil)
- '(electric-pair-mode 1)
- '(ess-default-style (quote DEFAULT))
- '(ess-keep-dump-files "always")
- '(ess-use-auto-complete t)
- '(indent-tabs-mode nil)
- '(inferior-ess-client-command "Initial")
- '(inferior-ess-client-name "Initial")
- '(inferior-ess-ddeclient "Initial")
- '(inhibit-startup-screen t)
- '(default-fill-column 80)
- '(matlab-indent-level 2)
- '(js-indent-level 4)
- )
-
 ;; Path setup
 (setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/opt/local/bin") exec-path))

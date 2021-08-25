@@ -26,7 +26,7 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
     sudo port install py38-pkgconfig
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
-    sudo apt-get install python3.7
+    sudo apt-get install python3.8
     # ipython?
     sudo apt-get install python-pip
     sudo apt-get install python-virtualenv
@@ -47,9 +47,7 @@ sudo -H pip install jedi
 sudo -H pip install black
 
 # black link
-pushd /opt/local/bin
-sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
-popd
+sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken

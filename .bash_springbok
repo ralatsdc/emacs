@@ -1,33 +1,22 @@
-
 # MacPorts setup
 # See: https://guide.macports.org/chunked/installing.shell.html
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Virtualenvwrapper setup
 # See: http://virtualenvwrapper.readthedocs.io/en/latest/install.html
-# export VIRTUALENVWRAPPER_PYTHON='/opt/local/bin/python3.7'
-# export VIRTUALENVWRAPPER_VIRTUALENV='/opt/local/bin/virtualenv-3.7'
-# export VIRTUALENVWRAPPER_VIRTUALENV_CLONE='/opt/local/bin/virtualenv-clone-3.7'
-source /opt/local/bin/virtualenvwrapper.sh-3.7
+source /opt/local/bin/virtualenvwrapper.sh-3.8
 export WORKON_HOME=$HOME/.virtualenvs
 
 # Emacs setup
 export EMACS_HOME=~/Projects/Springbok/emacs
 export EDITOR=emacs
 alias open.Emacs="open -n -a Emacs"
+alias open.Emacs="open -n -a Emacs"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
 # Kafka setup
 export KAFKA_HOME=~/Packages/Apache/kafka_2.12-2.5.0
 export PATH=$KAFKA_HOME/bin:$PATH
-
-# Mac OS X aliases
-alias dns.flush.cache="sudo dscacheutil -flushcache"
-alias dns.kill.responder="sudo killall -HUP mDNSResponder"
-alias dns.reset="dns.flush.cache ; sleep 3 ; dns.kill.responder"
-alias finder.killall="killall Finder /System/Library/CoreServices/Finder.app"
-alias finder.show.files="defaults write com.apple.finder AppleShowAllFiles YES ; finder.killall"
-alias finder.hide.files="defaults write com.apple.finder AppleShowAllFiles NO ; finder.killall"
 
 # Version control aliases 
 srt="committerdate"
@@ -37,30 +26,31 @@ fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
-# ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
-# alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
-# alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
-# alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"
-alias cd.addgene-bioinformatics="cd ~/Projects/Addgene/addgene-bioinformatics ; workon addgene-bioinformatics"
+alias cd.addgene-bioinformatics="workon addgene-bioinformatics ; cd ~/Projects/Addgene/addgene-bioinformatics/"
 
 # Springbok development aliases
-alias cd.system-planning-toolbox="cd ~/Workspace/Java/system-planning-toolbox"
+alias cd.GoogleNews="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews"
+alias cd.HTTP_Request_Randomizer="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews/HTTP_Request_Randomizer"
+alias cd.emacs="cd ~/Projects/Springbok/emacs"
+alias cd.springbok-retrospective="workon springbok-retrospective ; cd ~/Projects/Springbok/springbok-retrospective"
+alias cd.system-planning-toolbox="cd ~/Projects/Springbok/system-planning-toolbox"
 
 # IQT development aliases
-# alias conda.activate="source ~/miniconda3/bin/activate"
-alias cd.FWOC="conda activate fwoc ; cd ~/Projects/IQT/FWOC"
+alias cd.FWOC="workon FWOC ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC"
+alias cd.secure-bioinformatics-reuse="workon secure-bioinformatics-reuse ; cd ~/Projects/IQT/Secure-Code-Reuse/secure-bioinformatics-reuse/"
+alias open.PyCharm="open -n -a PyCharm"
 
-# added by Miniconda3 4.9.2 installer
+# Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/raymondleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/rleclair/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/raymondleclair/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

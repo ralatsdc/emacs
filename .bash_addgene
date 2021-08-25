@@ -1,4 +1,0 @@
-
-# Emacs setup
-export EMACS_HOME=~/Projects/Development/emacs
-export EDITOR=emacs

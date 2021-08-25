@@ -1,4 +1,4 @@
-;;;; Java
+;;;; Scala
 
 ;; Packages required
 ;; None

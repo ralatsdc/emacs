@@ -1,7 +1,6 @@
 ;;;; Development
 
 ;; Packages required
-(require 'use-package)
 (require 'async)
 (require 'auto-complete)
 (require 'flycheck)
@@ -19,15 +18,13 @@
 
 ;; Helm setup
 ;; See: https://emacs-helm.github.io/helm/
-(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; Magit setup
-;; See: https://magit.vc/manual/magit/Essential-Settings.html#Essential-Settings
-(global-set-key "\C-xg" 'magit-status)
+;; See: https://magit.vc/manual/magit.html#Status-Buffer
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Yasnippet setup
 ;; See: https://github.com/joaotavora/yasnippet
