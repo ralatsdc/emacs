@@ -37,37 +37,31 @@ fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
-ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
-alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
-alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
-alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"
+# ADDGENE_PROJECT_HOME="/Users/raymondleclair/Projects/Addgene"
+# alias source.bash_addgene="source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_addgene"
+# alias source.bash_staging="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_staging"
+# alias source.bash_vagrant="source.bash_addgene ; source $ADDGENE_PROJECT_HOME/addgene-dev-env/.bash_vagrant"
+alias cd.addgene-bioinformatics="cd ~/Projects/Addgene/addgene-bioinformatics ; workon addgene-bioinformatics"
 
 # Springbok development aliases
 alias cd.system-planning-toolbox="cd ~/Workspace/Java/system-planning-toolbox"
 
 # IQT development aliases
-alias cd.MITx-6.86x="cd /Users/raymondleclair/Projects/edX/MITx-6.86x ; conda activate mitx-6.86x"
-alias cd.addgene-bioinformatics="cd ~/Projects/IQT/addgene-bioinformatics ; workon addgene-bioinformatics"
-alias cd.ssake='cd ~/Projects/IQT/SSAKE/'
-
-# alias cd.bioconda-recipes="cd ~/Projects/IQT/bioconda-recipes ; source ~/miniconda3/bin/activate"
 # alias conda.activate="source ~/miniconda3/bin/activate"
+alias cd.FWOC="conda activate fwoc ; cd ~/Projects/IQT/FWOC"
 
-# added by Miniconda3 4.7.12 installer
-# >>> conda init >>>
+# added by Miniconda3 4.9.2 installer
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/opt/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$('/Users/rleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+    if [ -f "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        \export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/rleclair/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
-alias cd.fundamentals='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'
-alias cd.fundamentals-of-statistics='cd ~/odrive/Google-Drive-RAL-Blue-Peninsula/Work/edX/Fundamentals_of_Statistics/'
+# <<< conda initialize <<<

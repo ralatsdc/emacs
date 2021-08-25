@@ -2,28 +2,28 @@
 
 # System packages
 if [[ "$OSTYPE" == 'darwin19' ]]; then
-    sudo port install python37 +readline
-    sudo port select --set python python37
+    sudo port install python38 +readline
+    sudo port select --set python python38
 
-    sudo port install py37-ipython
-    sudo port select --set ipython py37-ipython
+    sudo port install py38-ipython
+    sudo port select --set ipython py38-ipython
 
-    sudo port install py37-pip
-    sudo port select --set pip pip37
+    sudo port install py38-pip
+    sudo port select --set pip pip38
 
-    sudo port install py37-virtualenv
-    sudo port select --set virtualenv virtualenv37
+    sudo port install py38-virtualenv
+    sudo port select --set virtualenv virtualenv38
 
-    sudo port install py37-virtualenvwrapper
+    sudo port install py38-virtualenvwrapper
     
-    sudo port install py37-flake8
-    port select --set flake8 flake8-37
-    port select --set pyflakes py37-pyflakes
+    sudo port install py38-flake8
+    sudo port select --set flake8 flake8-38
+    sudo port select --set pyflakes py38-pyflakes
 
-    sudo port install py37-pylint
-    sudo port select --set pylint pylint37
+    sudo port install py38-pylint
+    sudo port select --set pylint pylint38
     
-    sudo port install py37-pkgconfig
+    sudo port install py38-pkgconfig
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python3.7
@@ -47,7 +47,9 @@ sudo -H pip install jedi
 sudo -H pip install black
 
 # black link
-sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.7/bin/black black
+pushd /opt/local/bin
+sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
+popd
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken

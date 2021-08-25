@@ -2,7 +2,7 @@
 
 # System packages
 if [[ "$OSTYPE" == 'darwin19' ]]; then
-    sudo port install nodejs12
+    sudo port install nodejs14
     sudo port install npm6
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
