@@ -11,6 +11,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export EMACS_HOME=~/Projects/Springbok/emacs
 export EDITOR=emacs
 alias open.Emacs="open -n -a Emacs"
+alias open.Emacs="open -n -a Emacs"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
 # Kafka setup
@@ -24,14 +25,20 @@ fmt+="%(color:red)%(refname:short)%(color:reset) "
 fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
+# Addgene development aliases
+alias cd.addgene-bioinformatics="workon addgene-bioinformatics ; cd ~/Projects/Addgene/addgene-bioinformatics/"
+
 # Springbok development aliases
 alias cd.GoogleNews="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews"
 alias cd.HTTP_Request_Randomizer="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews/HTTP_Request_Randomizer"
 alias cd.emacs="cd ~/Projects/Springbok/emacs"
-alias cd.springbok-retrospective="cd ~/Projects/Springbok/springbok-retrospective"
-alias cd.system-planning-toolbox="cd ~/Workspace/Java/system-planning-toolbox"
+alias cd.springbok-retrospective="workon springbok-retrospective ; cd ~/Projects/Springbok/springbok-retrospective"
+alias cd.system-planning-toolbox="cd ~/Projects/Springbok/system-planning-toolbox"
 
 # IQT development aliases
+alias cd.FWOC="workon FWOC ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC"
+alias cd.secure-bioinformatics-reuse="workon secure-bioinformatics-reuse ; cd ~/Projects/IQT/Secure-Code-Reuse/secure-bioinformatics-reuse/"
+alias open.PyCharm="open -n -a PyCharm"
 
 # Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>

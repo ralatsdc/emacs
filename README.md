@@ -1,3 +1,8 @@
+# TODO
+
+Add https://jblevins.org/projects/markdown-mode/
+Add https://pandoc.org/
+
 # Emacs
 
 An editor-in-chief (EIC) is a publication's editorial leader, having final responsibility for all operations and policies.
