@@ -6,3 +6,4 @@ init.el
 *.elc
 *.log
 node_modules
+
