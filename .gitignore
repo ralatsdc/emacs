@@ -3,3 +3,6 @@
 .emacs
 black
 init.el
+*.elc
+*.log
+node_modules

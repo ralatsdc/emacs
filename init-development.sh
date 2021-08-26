@@ -7,9 +7,9 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
     sudo port install the_silver_searcher
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
-    sudo port install aspell
-    sudo port install aspell-en
-    sudo port install silversearcher-ag
+    sudo apt-get install aspell
+    sudo apt-get install aspell-en
+    sudo apt-get install silversearcher-ag
 
 else
     echo "Unexpected OS"

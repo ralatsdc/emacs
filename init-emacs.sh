@@ -6,11 +6,9 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
     sudo port install emacs-devel
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
-    sudo apt-get install software-properties-common 
-    sudo add-apt-repository ppa:ubuntu-elisp/ppa
-    sudo apt-get update
-    sudo apt-get install emacs-snapshot
-    sudo update-alternatives --config emacs
+    sudo add-apt-repository ppa:kelleyk/emacs
+    sudo apt install emacs27
+    update-alternatives --query emacs
 
 else
     echo "Unexpected OS"

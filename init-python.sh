@@ -27,13 +27,12 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python3.8
-    # ipython?
-    sudo apt-get install python-pip
-    sudo apt-get install python-virtualenv
+    sudo apt-get install python3-flake8
+    sudo apt-get install python3-ipython
+    sudo apt-get install python3-pip
+    sudo apt-get install python3-virtualenv
+    sudo apt-get install pylint3
     sudo apt-get install virtualenvwrapper
-    sudo apt-get install python-flake8
-    sudo apt-get install pylint
-    sudo apt-get install pkg-config
 
 else
     echo "Unexpected OS"
@@ -42,13 +41,28 @@ else
 fi
 
 # Python packages
-sudo -H pip install epc
-sudo -H pip install jedi
-sudo -H pip install black
+if [[ "$OSTYPE" == 'darwin19' ]]; then
+    sudo -H pip install epc
+    sudo -H pip install jedi
+    sudo -H pip install black
+
+elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
+    pip3 install epc
+    pip3 install jedi
+    pip3 install black
+    pip3 install flake8
+
+fi
 
 # black link
-sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
+if [[ "$OSTYPE" == 'darwin19' ]]; then
+    sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
 
+elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
+    ln -sf ~/.local/bin/black black
+
+fi
+    
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken
 if [ ! -e ~/.emacs.d/blacken ]; then
