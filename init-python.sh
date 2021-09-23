@@ -27,12 +27,11 @@ if [[ "$OSTYPE" == 'darwin19' ]]; then
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python3.8
+    sudo apt-get install python3.8-venv
     sudo apt-get install python3-flake8
     sudo apt-get install python3-ipython
     sudo apt-get install python3-pip
-    sudo apt-get install python3-virtualenv
     sudo apt-get install pylint3
-    sudo apt-get install virtualenvwrapper
 
 else
     echo "Unexpected OS"
