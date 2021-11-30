@@ -47,7 +47,9 @@ sudo -H pip install jedi
 sudo -H pip install black
 
 # black link
+pushd /opt/local/bin
 sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
+popd
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken
