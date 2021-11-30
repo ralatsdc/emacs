@@ -1,7 +1,7 @@
 # Java
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install maven3
     sudo port select --set maven maven3
 

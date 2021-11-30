@@ -1,8 +1,8 @@
 # JavaScript
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
-    sudo port install nodejs14
+if [[ "$OSTYPE" == 'darwin21' ]]; then
+    sudo port install nodejs16
     sudo port install npm6
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then

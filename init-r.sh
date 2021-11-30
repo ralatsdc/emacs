@@ -1,7 +1,7 @@
 # R
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install r
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then

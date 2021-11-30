@@ -1,7 +1,7 @@
 # Emacs
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install emacs-app
     sudo port install emacs-devel
 

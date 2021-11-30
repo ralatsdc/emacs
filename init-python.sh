@@ -1,7 +1,7 @@
 # Python
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install python38 +readline
     sudo port select --set python python38
 
