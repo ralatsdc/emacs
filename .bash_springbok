@@ -40,6 +40,7 @@ alias cd.springbok-retrospective="workon springbok-retrospective ; cd ~/Projects
 alias cd.system-planning-toolbox="cd ~/Projects/Springbok/system-planning-toolbox"
 
 # IQT development aliases
+alias cd.aisonobuoy-master="workon ai-sonobuoy-master ; cd ~/Projects/IQT/AI-Sonobuoy/AISonobuoy/Datascience ; git checkout master"
 alias cd.fwoc-master="conda activate fwoc-master ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC ; git checkout master"
 alias cd.fwoc-rl-filter-using-video-and-audio-duration="conda activate fwoc-rl-filter-using-video-and-audio-duration ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC ; git checkout rl/filter-using-video-and-audio-duration"
 alias cd.fwoc-rl-safe-dataset-option="conda activate fwoc-rl-safe-dataset-option ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC ; git checkout rl/safe-dataset-option"
@@ -53,14 +54,14 @@ export VOXCELEB2_PASSWORD="0s42xuw6"
 # Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/raymondleclair/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/raymondleclair/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/Users/raymondleclair/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/rleclair/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/raymondleclair/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
