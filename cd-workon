@@ -1,0 +1,16 @@
+
+path=$1
+bnch=$2
+
+repo=$(basename $1)
+venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
+
+cd $path
+workon $venv
+
+echo "((python-mode" \
+     > .dir-locals.el
+echo "  (flycheck-python-pylint-executable . \"$(which python)\"))" \
+     >> .dir-locals.el
+echo "  (flycheck-python-flake8-executable . \"$(which python)\")))" \
+     >> .dir-locals.el
