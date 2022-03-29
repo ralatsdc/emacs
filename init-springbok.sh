@@ -19,6 +19,7 @@ ln -sf $SCRIPT_HOME/.emacs .emacs
 popd
 
 # Setup Bash
+sed s%{{EMACS_HOME}}%$SCRIPT_HOME% .bash_profile-springbok > .bash_profile
 pushd ~
-ln -sf $SCRIPT_HOME/.bash_springbok .bash_springbok
+ln -sf $SCRIPT_HOME/.bash_profile .bash_profile
 popd

@@ -1,8 +1,4 @@
-export AWS_ACCESS_KEY_ID="ASIA5YSNMXMT7UDBWVEG"
-export AWS_SECRET_ACCESS_KEY="uwj8MAX29tQSCzHoKZjDZft2rDPvk28VpcDg1ywm"
-export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEJz//////////wEaCXVzLWVhc3QtMSJGMEQCIEtzV9UaVuiAaW+nrVVEpb1/IYPbmn3zKnh6vEWS/Ve4AiBjJPvCp4p9eoi0YsAUmF8/NpJnmHqhCHxs8usPabbdcCqTAwj1//////////8BEAAaDDk0NjEyODg2MTk5MSIMGgg11OJmkMbh40cHKucCOpbC4UW1AnX0a8OjFgifSm8Tg4I3sNRZkbBY6SzkY7l4ALMrsl2xoXu6LFcBSW/p1KbxdHVeL/q7P4lmx7DgTxzM3K37DmmMK0kalBc3Jh4EP7DllyEJPwAizFrfa9AuHdAwCLxueDOEubHLoDQ8HX2CZ1nY9+OsJtn8FpKbIpWQ1iIuajahLj/zonQw5w9fajlqd1LJmmFw6NpAxFg3XFDo5K2IoxboW4JRhDQCeW462sMS6bpznQrJFxhaevGECt8i7XafPOL+qIwyMwl0cAD+achxBdPCNgOp/f2LprhDIkEgfySkvWiPXwQPIrYNSRy11wC8278dAETC1T9NmHt3iEnjkiC67wMVsk3IuugHFMNa0u6fEbYu1eezH6rdkzSs+f/SUoPVpFU/jVrpDgTFjdD7OeTq/BIdtTKoqWfWhzfEj/+wYWplrX3FVtxqHISdDbgQpwf5XoDjfi3/O2HFa4nSv70w8uWoigY6pwGp0RihQC6hkRfjmdXtQYJM2yN+uOwM8sLu83voR3NUEPRNQdmhdaOmORnN5BsVU0B725MduslEeGyeO1MoiakvCAfLY6HyjGehSSnEimIqUDaLdVMgYMUs7Z0PFWTzE35iwLfsXhhi3EwP0xR9wO/4Xs5+XRJ1YQ2rQefpqc189lO9v876mQPft7eCpGN4C73O3KaABWFaXAVGa3TalBV0fTfAuM4efw=="
-
-# set PATH so it includes user's private bin if it exists
+# User's private bin
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
@@ -53,14 +49,14 @@ export VOXCELEB2_PASSWORD="0s42xuw6"
 # Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/{EMACS_HOME}/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rleclair/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/{EMACS_HOME}/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/{EMACS_HOME}/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/rleclair/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/{EMACS_HOME}/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

@@ -3,3 +3,4 @@
 .emacs
 black
 init.el
+.bash_profile
