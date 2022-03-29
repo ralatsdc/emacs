@@ -8,15 +8,14 @@ venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
 cd $path
 workon $venv
 
+echo "pylint" > .requirements.txt
+echo "flake8" > .requirements.txt
+
+python -m pip install -r .requirements.txt
+
 echo "((python-mode" \
      > .dir-locals.el
 echo "  (flycheck-python-pylint-executable . \"$(which python)\"))" \
      >> .dir-locals.el
 echo "  (flycheck-python-flake8-executable . \"$(which python)\")))" \
      >> .dir-locals.el
-
-echo "pylint" > .requirements.txt
-echo "flake8" > .requirements.txt
-
-python -m pip install -r .requirements.txt
-
