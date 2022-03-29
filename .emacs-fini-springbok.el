@@ -11,7 +11,7 @@
       '((top . 1) (left . 177) (width . 130) (height . 65)))
 
 ;; Dired setup
-(setq default-directory "/Users/rleclair/Projects")
+(setq default-directory "/Users/{{EMACS_HOME}}/Projects")
 
 ;; Ido setup
 ;; (ido-mode t)

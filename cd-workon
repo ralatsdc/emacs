@@ -9,7 +9,8 @@ cd $path
 workon $venv
 
 echo "pylint" > .requirements.txt
-echo "flake8" > .requirements.txt
+echo "flake8" >> .requirements.txt
+echo "ipython" >> .requirements.txt
 
 python -m pip install -r .requirements.txt
 

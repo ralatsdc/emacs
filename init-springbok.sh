@@ -14,6 +14,7 @@ $SCRIPT_HOME/init-yaml.sh
 # Setup Emacs
 sed s%{{EMACS_HOME}}%$SCRIPT_HOME% init-springbok.el > init.el
 sed s%{{EMACS_HOME}}%$SCRIPT_HOME% .emacs-springbok.el > .emacs
+sed s%{{EMACS_HOME}}%$SCRIPT_HOME% .emacs-fini-springbok.el > .emacs-fini.el
 pushd ~
 ln -sf $SCRIPT_HOME/.emacs .emacs
 popd
