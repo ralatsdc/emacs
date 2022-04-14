@@ -23,4 +23,7 @@ popd
 sed s%{{HOME}}%$HOME% .bash_profile-springbok > .bash_profile
 pushd ~
 ln -sf $EMACS_HOME/.bash_profile .bash_profile
+pushd ./bin
+ln -sf $EMACS_HOME/cd-workon cd-workon
+popd
 popd

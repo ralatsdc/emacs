@@ -11,6 +11,7 @@ workon $venv
 echo "pylint" > .requirements.txt
 echo "flake8" >> .requirements.txt
 echo "ipython" >> .requirements.txt
+echo "pip-tools" >> .requirements.txt
 
 python -m pip install -r .requirements.txt
 
@@ -20,3 +21,5 @@ echo "  (flycheck-python-pylint-executable . \"$(which python)\"))" \
      >> .dir-locals.el
 echo "  (flycheck-python-flake8-executable . \"$(which python)\")))" \
      >> .dir-locals.el
+
+git checkout $bnch
