@@ -1,6 +1,7 @@
 
 path=$1
 bnch=$2
+prfl=$3
 
 repo=$(basename $1)
 venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
@@ -21,5 +22,7 @@ echo "  (flycheck-python-pylint-executable . \"$(which python)\"))" \
      >> .dir-locals.el
 echo "  (flycheck-python-flake8-executable . \"$(which python)\")))" \
      >> .dir-locals.el
+
+export AWS_PROFILE=$prfl
 
 git checkout $bnch
