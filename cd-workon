@@ -1,28 +1,46 @@
 
-path=$1
-bnch=$2
-prfl=$3
+path=$1  # Repo path
+bnch=$2  # Repo branch
+prfl=$3  # AWS profile
 
+# virtualenv name convention repo-<initials>-<branch>
 repo=$(basename $1)
 venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
 
 cd $path
+
+# development configuration
 workon $venv
-
-echo "pylint" > .requirements.txt
-echo "flake8" >> .requirements.txt
-echo "ipython" >> .requirements.txt
-echo "pip-tools" >> .requirements.txt
-
+cat <<EOF > .requirements.txt
+flake8
+ipython
+pip-tools
+pre-commit
+pylint
+EOF
 python -m pip install -r .requirements.txt
 
-echo "((python-mode" \
-     > .dir-locals.el
-echo "  (flycheck-python-pylint-executable . \"$(which python)\"))" \
-     >> .dir-locals.el
-echo "  (flycheck-python-flake8-executable . \"$(which python)\")))" \
-     >> .dir-locals.el
+# emacs configuration
+cat <<EOF > .dir-locals.el
+((python-mode
+  (flycheck-python-pylint-executable . "$HOME/.virtualenvs/aisonobuoy-rl-export-audio-clips/bin/python"))
+  (flycheck-python-flake8-executable . "$HOME/.virtualenvs/aisonobuoy-rl-export-audio-clips/bin/python")))
+EOF
 
-export AWS_PROFILE=$prfl
-
+# git configuration
 git checkout $bnch
+cat <<EOF > .pre-commit-config.yaml
+repos:
+  - repo: local
+    hooks:
+      - id: jupyter-nb-clear-output
+        name: jupyter-nb-clear-output
+        files: \.ipynb$
+        stages: [commit]
+        language: system
+        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+EOF
+pre-commit install
+
+# aws configuration
+export AWS_PROFILE=$prfl
