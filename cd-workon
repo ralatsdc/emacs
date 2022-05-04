@@ -14,6 +14,7 @@ workon $venv
 cat <<EOF > .requirements.txt
 flake8
 ipython
+jupyterlab
 pip-tools
 pre-commit
 pylint
@@ -23,8 +24,8 @@ python -m pip install -r .requirements.txt
 # emacs configuration
 cat <<EOF > .dir-locals.el
 ((python-mode
-  (flycheck-python-pylint-executable . "$HOME/.virtualenvs/aisonobuoy-rl-export-audio-clips/bin/python"))
-  (flycheck-python-flake8-executable . "$HOME/.virtualenvs/aisonobuoy-rl-export-audio-clips/bin/python")))
+  (flycheck-python-pylint-executable . "$HOME/.virtualenvs/$venv/bin/python"))
+  (flycheck-python-flake8-executable . "$HOME/.virtualenvs/$venv/bin/python")))
 EOF
 
 # git configuration
