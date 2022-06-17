@@ -8,6 +8,7 @@ $EMACS_HOME/init-javascript.sh
 $EMACS_HOME/init-matlab.sh
 $EMACS_HOME/init-java.sh
 $EMACS_HOME/init-r.sh
+$EMACS_HOME/init-rust.sh
 $EMACS_HOME/init-scala.sh
 $EMACS_HOME/init-yaml.sh
 
