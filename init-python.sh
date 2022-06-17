@@ -1,7 +1,7 @@
 # Python
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install python38 +readline
     sudo port select --set python python38
 
@@ -47,7 +47,9 @@ sudo -H pip install jedi
 sudo -H pip install black
 
 # black link
+pushd /opt/local/bin
 sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
+popd
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken

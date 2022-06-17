@@ -3,6 +3,7 @@
 ;; Packages required
 (require 'python-mode)
 (require 'jedi)
+(require 'pyvenv)
 
 ;; Packages loaded
 (add-to-list 'load-path "~/.emacs.d/blacken")

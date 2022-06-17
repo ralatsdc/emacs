@@ -1,5 +1,8 @@
 *~
 .DS_Store
+.bash_profile
 .emacs
+.emacs-fini.el
 black
 init.el
+flycheck_*

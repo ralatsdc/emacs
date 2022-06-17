@@ -1,9 +1,11 @@
 # Emacs
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
+    # sudo port install emacs-app-devel
     sudo port install emacs-app
-    sudo port install emacs-devel
+    # sudo port install emacs-devel
+    sudo port install emacs
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install software-properties-common 

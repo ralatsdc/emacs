@@ -1,3 +1,8 @@
+# User's private bin
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # MacPorts setup
 # See: https://guide.macports.org/chunked/installing.shell.html
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -10,7 +15,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 # Emacs setup
 export EMACS_HOME=~/Projects/Springbok/emacs
 export EDITOR=emacs
-alias open.Emacs="open -n -a Emacs"
 alias open.Emacs="open -n -a Emacs"
 alias eclimd="/Applications/Eclipse.app/Contents/Eclipse/eclimd"
 
@@ -26,7 +30,7 @@ fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
-alias cd.addgene-bioinformatics="workon addgene-bioinformatics ; cd ~/Projects/Addgene/addgene-bioinformatics/"
+alias cd.addgene-bioinformatics-master="source cd-workon ~/Projects/Addgene/addgene-bioinformatics master"
 
 # Springbok development aliases
 alias cd.GoogleNews="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews"
@@ -36,21 +40,23 @@ alias cd.springbok-retrospective="workon springbok-retrospective ; cd ~/Projects
 alias cd.system-planning-toolbox="cd ~/Projects/Springbok/system-planning-toolbox"
 
 # IQT development aliases
-alias cd.FWOC="workon FWOC ; cd ~/Projects/IQT/Fusing-Without-Confusing/FWOC"
-alias cd.secure-bioinformatics-reuse="workon secure-bioinformatics-reuse ; cd ~/Projects/IQT/Secure-Code-Reuse/secure-bioinformatics-reuse/"
+alias cd.aisonobuoy-main="source cd-workon ~/Projects/IQT/AI-Sonobuoy/AISonobuoy main"
+alias cd.aisonobuoy-rl-load-and-use-meta-data="source cd-workon ~/Projects/IQT/AI-Sonobuoy/AISonobuoy rl/load-and-use-meta-data"
 alias open.PyCharm="open -n -a PyCharm"
+export VOXCELEB2_USERNAME="voxceleb1912"
+export VOXCELEB2_PASSWORD="0s42xuw6"
 
 # Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/raymondleclair/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('{{HOME}}/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/raymondleclair/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "{{HOME}}/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "{{HOME}}/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/raymondleclair/opt/miniconda3/bin:$PATH"
+        export PATH="{{HOME}}/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

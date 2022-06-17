@@ -1,7 +1,7 @@
 # Development
 
 # System packages
-if [[ "$OSTYPE" == 'darwin19' ]]; then
+if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port install aspell
     sudo port install aspell-dict-en
     sudo port install the_silver_searcher
@@ -16,3 +16,8 @@ else
     exit 1
 
 fi
+
+echo
+echo ">>> Helm might need a fix!"
+echo "    See: https://github.com/emacs-helm/helm/commit/78cad8558691063eed7577799969c3caaa274015"
+echo
