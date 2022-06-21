@@ -5,6 +5,7 @@
 (load (concat emacs-home ".emacs-init.el"))
 (load (concat emacs-home ".emacs-development.el"))
 (load (concat emacs-home ".emacs-go.el"))
+(load (concat emacs-home ".emacs-haskell.el"))
 (load (concat emacs-home ".emacs-python.el"))
 (load (concat emacs-home ".emacs-javascript.el"))
 (load (concat emacs-home ".emacs-matlab.el"))
