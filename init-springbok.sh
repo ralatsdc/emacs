@@ -3,6 +3,7 @@ EMACS_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Setup Python, JavaScript, MATLAB, Java, and R development
 $EMACS_HOME/init-emacs.sh
 $EMACS_HOME/init-development.sh
+$EMACS_HOME/init-go.sh
 $EMACS_HOME/init-python.sh
 $EMACS_HOME/init-javascript.sh
 $EMACS_HOME/init-matlab.sh
