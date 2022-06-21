@@ -4,6 +4,7 @@
 ;; and R development
 (load (concat emacs-home "init-emacs.el"))
 (load (concat emacs-home "init-development.el"))
+(load (concat emacs-home "init-go.el"))
 (load (concat emacs-home "init-python.el"))
 (load (concat emacs-home "init-javascript.el"))
 (load (concat emacs-home "init-matlab.el"))
