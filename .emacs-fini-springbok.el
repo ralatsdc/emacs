@@ -7,6 +7,8 @@
 (setq exec-path (append '("/usr/local/bin") exec-path))
 (setenv "PATH" (concat "/usr/local/go/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/local/go/bin") exec-path))
+(setenv "PATH" (concat "~/.ghcp/bin:" (getenv "PATH")))
+(setq exec-path (append '("~/.ghcp/bin") exec-path))
 
 ;; Frame setup
 (setq initial-frame-alist

@@ -2,5 +2,5 @@
 
 ;; Packages
 (setq to-install
-      '(rust-mode flycheck-rust))
+      '(haskell-mode flyckeck-haskell))
 (mapc 'install-if-needed to-install)
