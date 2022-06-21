@@ -1,4 +1,4 @@
-;;;; Rust
+;;;; Haskell
 
 ;; Packages
 (setq to-install
