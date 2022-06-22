@@ -5,5 +5,6 @@
 (require 'matlab-load)
 
 ;; Matlab-emacs setup
+;; See: https://sourceforge.net/p/matlab-emacs/src/ci/master/tree/INSTALL
 (setq matlab-indent-function-body t)
 (setq fill-column 125)

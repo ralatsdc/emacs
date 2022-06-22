@@ -17,6 +17,7 @@ else
 
 fi
 
+# TODO: Remove when unneeded
 echo
 echo ">>> Helm might need a fix!"
 echo "    See: https://github.com/emacs-helm/helm/commit/78cad8558691063eed7577799969c3caaa274015"

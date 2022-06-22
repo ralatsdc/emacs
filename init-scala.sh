@@ -1,15 +1,16 @@
 # Scala
 
 # System packages
-if [[ "$OSTYPE" == 'darwin21' ]]; then
-    sudo port install sbt
+# None
 
-elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
-    # TODO: Complete
-    echo "Not implemented"
+# Coursier installation
+# See: https://docs.scala-lang.org/getting-started/index.html
+#      https://get-coursier.io/docs/cli-installation
+curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-apple-darwin.gz | gzip -d > cs \
+    && chmod +x cs \
+    && (xattr -d com.apple.quarantine cs || true) \
+    && ./cs setup -y
 
-else
-    echo "Unexpected OS"
-    exit 1
-
-fi
+# Metals installation
+# See: https://scalameta.org/metals/docs/editors/emacs
+coursier install metals
