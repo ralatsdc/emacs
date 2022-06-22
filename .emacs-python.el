@@ -6,6 +6,7 @@
 (require 'pyvenv)
 
 ;; Packages loaded
+;; See: https://github.com/pythonic-emacs/blacken
 (add-to-list 'load-path "~/.emacs.d/blacken")
 (require 'blacken)
 

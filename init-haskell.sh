@@ -4,6 +4,7 @@
 # None
 
 # GHCup installation
+# See: https://www.haskell.org/ghcup/
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org > install-ghcup.sh
 chmod a+x install-ghcup.sh
 export BOOTSTRAP_HASKELL_NONINTERACTIVE=1  # - any nonzero value for noninteractive installation

@@ -1,7 +1,6 @@
 ;;;; Development
 
 ;; Packages required
-(require 'async)
 (require 'auto-complete)
 (require 'flycheck)
 (require 'helm-config)

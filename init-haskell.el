@@ -2,5 +2,5 @@
 
 ;; Packages
 (setq to-install
-      '(haskell-mode flyckeck-haskell))
+      '(haskell-mode flycheck-haskell))
 (mapc 'install-if-needed to-install)
