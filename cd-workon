@@ -1,16 +1,70 @@
+#!/usr/bin/env bash
 
-path=$1  # Repo path
-bnch=$2  # Repo branch
-prfl=$3  # AWS profile
+# Print usage
+usage() {
+    cat << EOF
 
-# virtualenv name convention repo-<initials>-<branch>
+NAME
+    cd-workon - Setup Springbok's Python development environment
+
+SYNOPSIS
+    cd-workon <repo-path> <branch-name> [<aws-profile>]
+
+DESCRIPTION
+    Change working directory to the repository path, 
+OPTIONS 
+    -c    Use conda rather than virtualenv
+
+EOF
+}
+
+# Parse command line options
+use_conda=0
+while getopts ":ch" opt; do
+    case $opt in
+	c)
+	    use_conda=1
+	    ;;
+	h)
+	    usage
+	    exit 0
+	    ;;
+	\?)
+	    echo "Invalid option: -${OPTARG}" >&2
+	    usage
+	    exit 1
+	    ;;
+	\:)
+	    echo "Option -${OPTARG} requires an argument" >&2
+	    usage
+	    exit 1
+	    ;;
+    esac
+done
+
+# Parse command line arguments
+shift `expr ${OPTIND} - 1`
+if [ "$#" -lt 2 ]; then
+    echo "At least two arguments required"
+    exit 1
+fi
+path="${1}"  # Repo path
+bnch="${2}"  # Repo branch
+prfl="${3}"  # AWS profile
+
+# Set virtualenv name convention repo-<initials>-<branch>
 repo=$(basename $1)
 venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
 
+# Change working directory to the repository path
 cd $path
 
-# development configuration
-workon $venv
+# Set development configuration
+if [ $use_conda ]; then
+    conda activate $venv
+else
+    workon $venv
+fi
 cat <<EOF > .requirements.txt
 flake8
 ipython
@@ -21,14 +75,14 @@ pylint
 EOF
 python -m pip install -r .requirements.txt
 
-# emacs configuration
+# Set emacs configuration
 cat <<EOF > .dir-locals.el
 ((python-mode
   (flycheck-python-pylint-executable . "$HOME/.virtualenvs/$venv/bin/python"))
   (flycheck-python-flake8-executable . "$HOME/.virtualenvs/$venv/bin/python")))
 EOF
 
-# git configuration
+# Set git configuration
 git checkout $bnch
 cat <<EOF > .pre-commit-config.yaml
 repos:
@@ -43,5 +97,5 @@ repos:
 EOF
 pre-commit install
 
-# aws configuration
+# Set aws configuration
 export AWS_PROFILE=$prfl
