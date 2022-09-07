@@ -30,18 +30,18 @@ fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
 
 # Addgene development aliases
-alias cd.addgene-bioinformatics-master="source cd-workon ~/Projects/Addgene/addgene-bioinformatics master"
+alias cd.addgene-bioinformatics-master="source cd-activate ~/Projects/Addgene/addgene-bioinformatics master"
 
 # Springbok development aliases
 alias cd.GoogleNews="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews"
 alias cd.HTTP_Request_Randomizer="cd ~/Projects/Springbok/springbok-retrospective/GoogleNews/HTTP_Request_Randomizer"
 alias cd.emacs="cd ~/Projects/Springbok/emacs"
-alias cd.springbok-retrospective="workon springbok-retrospective ; cd ~/Projects/Springbok/springbok-retrospective"
+alias cd.springbok-retrospective="source cd-activate ~/Projects/Springbok/springbok-retrospective springbok-retrospective"
 alias cd.system-planning-toolbox="cd ~/Projects/Springbok/system-planning-toolbox"
 
 # IQT development aliases
-alias cd.aisonobuoy-main="source cd-workon ~/Projects/IQT/AI-Sonobuoy/AISonobuoy main"
-alias cd.aisonobuoy-rl-load-and-use-meta-data="source cd-workon ~/Projects/IQT/AI-Sonobuoy/AISonobuoy rl/load-and-use-meta-data"
+alias cd.aisonobuoy-main="source cd-activate ~/Projects/IQT/AI-Sonobuoy/AISonobuoy main"
+alias cd.aisonobuoy-rl-load-and-use-meta-data="source cd-activate ~/Projects/IQT/AI-Sonobuoy/AISonobuoy rl/load-and-use-meta-data"
 alias open.PyCharm="open -n -a PyCharm"
 export VOXCELEB2_USERNAME="voxceleb1912"
 export VOXCELEB2_PASSWORD="0s42xuw6"
