@@ -2,28 +2,28 @@
 
 # System packages
 if [[ "$OSTYPE" == 'darwin21' ]]; then
-    sudo port install python38 +readline
-    sudo port select --set python python38
+    sudo port install python310 +readline
+    sudo port select --set python python310
 
-    sudo port install py38-ipython
-    sudo port select --set ipython py38-ipython
+    sudo port install py310-ipython
+    sudo port select --set ipython py310-ipython
 
-    sudo port install py38-pip
-    sudo port select --set pip pip38
+    sudo port install py310-pip
+    sudo port select --set pip pip310
 
-    sudo port install py38-virtualenv
-    sudo port select --set virtualenv virtualenv38
+    sudo port install py310-virtualenv
+    sudo port select --set virtualenv virtualenv310
 
-    sudo port install py38-virtualenvwrapper
+    sudo port install py310-virtualenvwrapper
     
-    sudo port install py38-flake8
-    sudo port select --set flake8 flake8-38
-    sudo port select --set pyflakes py38-pyflakes
+    sudo port install py310-flake8
+    sudo port select --set flake8 flake8-310
+    sudo port select --set pyflakes py310-pyflakes
 
-    sudo port install py38-pylint
-    sudo port select --set pylint pylint38
+    sudo port install py310-pylint
+    sudo port select --set pylint pylint310
     
-    sudo port install py38-pkgconfig
+    sudo port install py310-pkgconfig
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install python3.8
