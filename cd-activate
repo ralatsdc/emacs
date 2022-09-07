@@ -5,13 +5,17 @@ usage() {
     cat << EOF
 
 NAME
-    cd-workon - Setup Springbok's Python development environment
+    cd-activate - Setup Springbok's Python development environment
 
 SYNOPSIS
-    cd-workon <repo-path> <branch-name> [<aws-profile>]
+    cd-activate <repo-path> <branch-name> [<aws-profile>]
 
 DESCRIPTION
-    Change working directory to the repository path, 
+    Change the working directory to the repository path, activate a
+    virtualenv or conda environment, install development requirements,
+    configure emacs to use flycheck python linters, configure a git
+    pre-commit hook, and export an AWS profile.
+
 OPTIONS 
     -c    Use conda rather than virtualenv
 
@@ -48,23 +52,25 @@ if [ "$#" -lt 2 ]; then
     echo "At least two arguments required"
     exit 1
 fi
-path="${1}"  # Repo path
-bnch="${2}"  # Repo branch
-prfl="${3}"  # AWS profile
+path="$1"  # Repo path
+bnch="$2"  # Repo branch
+prfl="$3"  # AWS profile
 
 # Set virtualenv name convention repo-<initials>-<branch>
-repo=$(basename $1)
+repo=$(basename $path)
 venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
 
 # Change working directory to the repository path
 cd $path
 
 # Set development configuration
-if [ $use_conda ]; then
+if [ $use_conda == 1 ]; then
     conda activate $venv
 else
     workon $venv
 fi
+
+# Install development requirements
 cat <<EOF > .requirements.txt
 flake8
 ipython
