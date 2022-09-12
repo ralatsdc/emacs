@@ -17,18 +17,24 @@ DESCRIPTION
     pre-commit hook, and export an AWS profile.
 
 OPTIONS 
-    -c    Use conda rather than virtualenv
+    -c    Activate a conda environment
 
 EOF
 }
+
+# Prevent reactivation of active conda environments
+if [ -n "$USE_CONDA" ]; then
+    echo "Cannot reactivate a conda environment once activated. Rerun in a new window."
+    exit 1
+fi
 
 # Parse command line options
 use_conda=0
 while getopts ":ch" opt; do
     case $opt in
-	c)
-	    use_conda=1
-	    ;;
+        c)
+            use_conda=1
+            ;;
 	h)
 	    usage
 	    exit 0
@@ -65,6 +71,7 @@ cd $path
 
 # Set development configuration
 if [ $use_conda == 1 ]; then
+    export USE_CONDA=1  # Prevent reactivation
     conda activate $venv
 else
     workon $venv
@@ -82,11 +89,19 @@ EOF
 python -m pip install -r .requirements.txt
 
 # Set emacs configuration
-cat <<EOF > .dir-locals.el
+if [ $use_conda == 1 ]; then
+    cat <<EOF > .dir-locals.el
+((python-mode
+  (flycheck-python-pylint-executable . "$HOME/opt/miniconda3/envs/$venv/bin/python"))
+  (flycheck-python-flake8-executable . "$HOME/opt/miniconda3/envs/$venv/bin/python")))
+EOF
+else
+    cat <<EOF > .dir-locals.el
 ((python-mode
   (flycheck-python-pylint-executable . "$HOME/.virtualenvs/$venv/bin/python"))
   (flycheck-python-flake8-executable . "$HOME/.virtualenvs/$venv/bin/python")))
 EOF
+fi
 
 # Set git configuration
 git checkout $bnch
