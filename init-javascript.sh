@@ -2,8 +2,8 @@
 
 # System packages
 if [[ "$OSTYPE" == 'darwin21' ]]; then
-    sudo port install nodejs16
-    sudo port install npm6
+    sudo port install nodejs19
+    sudo port install npm9
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     sudo apt-get install nodejs
