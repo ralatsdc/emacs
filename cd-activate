@@ -82,6 +82,7 @@ cat <<EOF > .requirements.txt
 flake8
 ipython
 jupyterlab
+notebook
 pip-tools
 pre-commit
 pylint
