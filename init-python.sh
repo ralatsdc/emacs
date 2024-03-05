@@ -1,7 +1,7 @@
 # Python
 
 # System packages
-if [[ "$OSTYPE" == 'darwin21' ]]; then
+if [[ "$OSTYPE" == 'darwin22' ]]; then
     sudo port install python310 +readline
     sudo port select --set python python310
 
@@ -15,7 +15,11 @@ if [[ "$OSTYPE" == 'darwin21' ]]; then
     sudo port select --set virtualenv virtualenv310
 
     sudo port install py310-virtualenvwrapper
+    sudo port select --set virtualenvwrapper virtualenvwrapper310
     
+    sudo port install py310-black
+    sudo port select --set black black310
+
     sudo port install py310-flake8
     sudo port select --set flake8 flake8-310
     sudo port select --set pyflakes py310-pyflakes
@@ -44,12 +48,6 @@ fi
 # Python packages
 sudo -H pip install epc
 sudo -H pip install jedi
-sudo -H pip install black
-
-# black link
-pushd /opt/local/bin
-sudo ln -sf /opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/black black
-popd
 
 # blacken installation
 # See: https://github.com/pythonic-emacs/blacken
