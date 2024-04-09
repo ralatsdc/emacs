@@ -1,4 +1,6 @@
-EMACS_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#!/bin/zsh
+
+EMACS_HOME="${0:a:h}"
 
 # Setup Python, JavaScript, MATLAB, Java, and R development
 $EMACS_HOME/init-emacs.sh
@@ -24,10 +26,13 @@ ln -sf $EMACS_HOME/.emacs .emacs
 popd
 
 # Setup Bash
-sed s%{{HOME}}%$HOME% .bash_profile-springbok > .bash_profile
+sed s%{{HOME}}%$HOME% .zshrc-springbok > .zshrc
+sed s%{{HOME}}%$HOME% .zshenv-springbok > .zshenv
 pushd ~
-ln -sf $EMACS_HOME/.bash_profile .bash_profile
+ln -sf $EMACS_HOME/.zshrc .zshrc
+mkdir -p bin
 pushd ./bin
-ln -sf $EMACS_HOME/cd-activate cd-activate
+# ln -sf $EMACS_HOME/cd-activate cd-activate
+ln -sf $EMACS_HOME/setup-python-development.py setup-python-development.py
 popd
 popd

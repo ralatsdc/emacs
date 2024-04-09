@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Print usage
 usage() {
@@ -64,6 +64,7 @@ prfl="$3"  # AWS profile
 
 # Set virtualenv name convention repo-<initials>-<branch>
 repo=$(basename $path)
+echo "repo: $repo"
 venv=$(echo "$repo-$(echo "$bnch" | sed 's%/%-%')" | tr '[:upper:]' '[:lower:]')
 
 # Change working directory to the repository path

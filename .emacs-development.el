@@ -3,7 +3,8 @@
 ;; Packages required
 (require 'auto-complete)
 (require 'flycheck)
-(require 'helm-config)
+;; TODO: Remove?
+;; (require 'helm-config)
 (require 'magit)
 (require 'yasnippet)
 

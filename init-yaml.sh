@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # YAML
 
 # System packages

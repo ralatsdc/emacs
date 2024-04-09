@@ -17,8 +17,8 @@
 (setenv "PATH" (concat "~/.cargo/bin:" (getenv "PATH")))
 (setq exec-path (append '("~/.cargo/bin") exec-path))
 ;; .. Scala
-(setenv "PATH" (concat "/Users/raymondleclair/Library/Application Support/Coursier/bin/scala:" (getenv "PATH")))
-(setq exec-path (append '("/Users/raymondleclair/Library/Application Support/Coursier/bin/scala") exec-path))
+(setenv "PATH" (concat "/Users/raymondleclair/Library/Application Support/Coursier/bin:" (getenv "PATH")))
+(setq exec-path (append '("/Users/raymondleclair/Library/Application Support/Coursier/bin") exec-path))
 
 ;; Frame setup
 (setq initial-frame-alist

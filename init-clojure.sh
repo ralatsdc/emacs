@@ -1,11 +1,11 @@
+#!/bin/zsh
+
 # Clojure
 
 # System packages
-if [[ "$OSTYPE" == 'darwin21' ]]; then
+if [[ "$OSTYPE" == 'darwin23.0' ]]; then
     # See: https://en.wikibooks.org/wiki/Clojure_Programming/Getting_Started#Using_MacPorts
-    sudo port install clojure
-    sudo port install rlwrap
-    sudo port install leiningen
+    sudo port install clojure +rlwrap
 
 elif [[ "$OSTYPE" == 'linux-gnu' ]]; then
     # TODO: Complete

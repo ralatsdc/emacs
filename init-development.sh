@@ -1,7 +1,9 @@
+#!/bin/zsh
+
 # Development
 
 # System packages
-if [[ "$OSTYPE" == 'darwin21' ]]; then
+if [[ "$OSTYPE" == 'darwin23.0' ]]; then
     sudo port install aspell
     sudo port install aspell-dict-en
     sudo port install the_silver_searcher

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # MATLAB
 
 # System packages

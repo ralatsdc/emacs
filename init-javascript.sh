@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # JavaScript
 
 # System packages
@@ -22,7 +24,7 @@ sudo npm install -g jshint
 sudo npm install -g js-beautify
 
 # Setup JSHint and ESLint
-SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_HOME="${0:a:h}"
 pushd ~
 ln -sf $SCRIPT_HOME/.jshintrc-default .jshintrc
 ln -sf $SCRIPT_HOME/.eslintrc-google .eslintrc

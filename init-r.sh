@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # R
 
 # System packages
