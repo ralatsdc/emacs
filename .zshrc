@@ -40,6 +40,7 @@ fmt="'%(committerdate:short) %(authorname) %(HEAD) "
 fmt+="%(color:red)%(refname:short)%(color:reset) "
 fmt+="-- %(contents:subject)'"
 alias git.for-each-ref="git for-each-ref --sort=$srt refs/heads/ --format=$fmt"
+# autoload -Uz compinit && compinit
 
 # TODO: Remove?
 # Addgene development aliases
@@ -75,10 +76,10 @@ export VOXCELEB2_PASSWORD="0s42xuw6"
 # TODO: Remove?
 export EDGETECH_CORE_HOME="~/Projects/IQT/Sky-Scan/edgetech-core/core"
 
-alias ssh.skyscan-011=‘ssh skyscan-011’
-alias ssh.shipscan-001=‘ssh shipscan-001’
-alias ssh.shipscan-003=‘ssh shipscan-003’
-alias ssh.collector-kit-001=‘ssh collector-kit-001’
+alias ssh.skyscan-011="ssh skyscan-011"
+alias ssh.shipscan-001="ssh shipscan-001"
+alias ssh.shipscan-003="ssh shipscan-003"
+alias ssh.collector-kit-001="ssh collector-kit-001"
 
 # Added by Miniconda3 4.9.2 installer
 # >>> conda initialize >>>
