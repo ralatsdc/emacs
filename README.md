@@ -1,39 +1,31 @@
-# TODO
+# Emacs (Superseded)
 
-Add https://jblevins.org/projects/markdown-mode/
-Add https://pandoc.org/
+**This repository has been superseded by the [dotfiles](https://github.com/ralatsdc/dotfiles) repository.**
 
-# Emacs
+This repo contained a custom bootstrapping system for Emacs and shell
+configuration using per-language shell scripts (`init-*.sh`) and Emacs
+Lisp files (`init-*.el`, `.emacs-*.el`), with `sed`-based templating
+to generate config files from templates.
 
-An editor-in-chief (EIC) is a publication's editorial leader, having final responsibility for all operations and policies.
+## What changed
 
-# Installation
+The functionality provided by this repo has been modernized and moved
+to a chezmoi-managed dotfiles repository at
+`~/Projects/Springbok/dotfiles/`.
 
-## Prerequisites
+| Before (this repo) | After (dotfiles repo) |
+|---|---|
+| `init-springbok.sh` + `sed` templating | chezmoi with Go templates |
+| Dual config: `.emacs-*.el` + `init-*.el` | Single `~/.emacs.d/` with `use-package` |
+| `auto-complete` + `jedi` + `tern` | corfu + cape + eglot (built-in LSP) |
+| `lsp-mode` / `lsp-metals` / `lsp-ui` | eglot (built into Emacs 29+) |
+| ESS, yaml-mode, matlab-mode built from source | All installed from MELPA |
+| Secrets hardcoded in `.zshrc` | macOS Keychain |
+| NVM + manual `JAVA_HOME` aliases | mise |
+| 11 languages configured | 7 active: Python, JS, Rust, Java, R, MATLAB, YAML |
 
-The default (Springbok) installation assumes the following packages have been installed manually:
-+ [MacPorts](https://www.macports.org/install.php)
-+ [Java](https://www.java.com/en/)
-+ [Eclipse](https://www.eclipse.org/)
-+ [MacTeX](https://tug.org/mactex/mactex-download.html)
-+ [Vagrant](https://www.vagrantup.com/downloads.html)
-+ [R](https://cran.r-project.org/bin/macosx/)
+## History
 
-All other dependencies are installed from MacPorts, or, in the case of MATLAB, R, Java, and YAML from source, in the various Bash init scripts.
-
-## Quickstart
-
-1. Clone the emacs setup repository. The resulting directory is referred to as EMACS_HOME below.
-```
-$ git clone git@github.com:ralatsdc/emacs.git
-```
-2. Run the Bash init script `init-springbok.sh`, or equivalent.
-```
-$ $EMACS_HOME/init-springbok.sh
-```
-3. Launch Emacs and evaluate the Emacs Lisp init script `init.el`.
-```
-$ open -n -a Emacs $EMACS_HOME/init.el, or equivalent
-M-x eval-buffer
-```
-4. [Optional] Source the bash profile
+This repo is preserved at its final working state for reference. The
+per-language installer scripts (`init-*.sh`) and Emacs Lisp files
+document what was originally installed and configured on each machine.
