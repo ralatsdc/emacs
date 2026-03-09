@@ -7,8 +7,8 @@ if [[ "$OSTYPE" == 'darwin23.0' ]]; then
     sudo port install python310 +readline
     sudo port select --set python python310
 
-    sudo port install py310-ipython
-    sudo port select --set ipython py310-ipython
+    # sudo port install py310-ipython
+    # sudo port select --set ipython py310-ipython
 
     sudo port install py310-pip
     sudo port select --set pip pip310

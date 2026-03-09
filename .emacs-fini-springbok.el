@@ -22,7 +22,7 @@
 
 ;; Frame setup
 (setq initial-frame-alist
-      '((top . 1) (left . 177) (width . 130) (height . 65)))
+      '((top . 1) (left . 100) (width . 130) (height . 65)))
 
 ;; Dired setup
 (setq default-directory "{{HOME}}/Projects")
